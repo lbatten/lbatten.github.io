@@ -1,0 +1,187 @@
+<head>
+  <title>Satigo Residency Dashboard</title>
+
+
+  <!--link to Bootstrap 4-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  <!--link to oswald (light) font-->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
+
+  <!--link to external CSS-->
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+
+  <!--link to highcharts-->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+</head>
+
+<body>
+  <!--NAVIGATION BAR-->
+  <div class="container-fluid">
+    <div class="top">
+      <div><h1><img id="logo" src="logo-long.png">  |  RESIDENCY DASHBOARD</h1></div>
+      <div><a href="#"><img id="exit" src="exit.png"></a></div>
+    </div>
+  </div>
+
+  <!--MAIN CONTAINER-->
+  <div class="container-fluid">
+    <div class="row">
+
+    <!--LEFT SIDE BAR-->
+      <div id="left-sidebar" class="col-lg-3">
+
+        <div class="box" id="associates"><h1><strong>12 <!--insert data--></strong></h1>
+          <br> <h5>current associates</h5>
+        </div>
+
+        <div id="PO">
+          <h4>CURRENT PURCHASE ORDER</h4>
+          <hr>
+            <div>
+
+              <table>
+                <tr>
+                  <td>Value: </td>
+                  <td>£100k<!--insert data--></td>
+                </tr>
+                <tr>
+                  <td>Start date: </td>
+                  <td>01/07/2017<!--insert data--></td>
+                </tr>
+              </table>
+
+            </div>
+
+            <div>
+              <h5>Left to spend</h5>
+              <!--insert progress bar linked to data-->
+
+              <div class="progress">
+                <!--insert placeholder image of progress bar-->
+              </div>
+
+              <h5>Spent</h5>
+              <!--insert progress bar linked to data-->
+
+              <div class="progress">
+                <!--insert placeholder image of progress bar-->
+              </div>
+            </div>
+        </div>
+
+        <div id="account">
+          <h4>YOUR ACCOUNT MANAGER</h4>
+          <hr>
+          <div id="acc">
+            <div>
+              <img id="profile" src="http://satigo.com/wp-content/uploads/2016/05/Aren1.jpg">
+            </div>
+            <div>
+              <p>Aren Besim
+              <br>Phone +44 (0) 2072 563 210
+              <br>Phone +44 (0) 7896 452 014
+              <br>aren.besim@satigo.com</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    <!--MAIN DASHBOARD *problem with responsiveness* -->
+      <div id="main-dash" class="col-lg-9">
+        <div class="maintitle row">
+          <div class="col-md-4" id="purchasing">
+            <div class="tt"><h1>PURCHASING</h1></div>
+            <!--DATES DROPDOWN-->
+            <form action="/action_page.php">
+              <table>
+              <tr>
+                <td>Dates from: </td>
+                <td>to:</td>
+              </tr>
+              <tr>
+                <td><input type="date" name="from"></td>
+                <td><input type="date" name="to"></td>
+              </tr>
+              <!--BOXES-->
+              <tr>
+                <td>
+                  <div class="box1" id="total"><h1><strong>29 <!--insert data--></strong></h1>
+                    <br> <h5>total associates</h5>
+                  </div>
+                </td>
+                <td>
+                  <div class="box1" id="spent"><h1><strong>£253k <!--insert data--></strong></h1>
+                    <br> <h5>total spent</h5>
+                  </div>
+                </td>
+              </tr>
+            </table>
+            </form>
+
+            <!--VALUE & BILLABLE PROGRESS BARS-->
+            <div>
+              <h6>Value</h6>
+              <!--insert bar graph linked to data-->
+
+              <!--INSERT CHART FROM HIGHCHARTS-->
+              <!--insert bar graph linked to data-->
+              <div id="valuebar" class="bar"></div>
+
+              <h6>Billable days</h6>
+              <!--insert bar graph linked to data-->
+              <div id="billablebar" class="bar"></div>
+
+            </div>
+          </div>
+
+          <!--SKILLS MATRIX-->
+          <div class="col-md-8" id="skills">
+            <div class="tt"><h1>SKILLS MATRIX</h1></div>
+            <div class="top-container">
+                <div>
+                  <h6>Skills Usage</h6>
+                  <!--insert bar graph linked to data-->
+                  <div id="skillsbar"></div>
+                </div>
+                <div>
+                  <h6>Where your associates are based</h6>
+                  <!--insert placeholder image of bar graph-->
+                  <img class="bar" src="map.png">
+                </div>
+            </div>
+
+            <div class="bottom-container">
+              <div>
+                <!--insert placeholder image of bar graph-->
+                <img class="graph" src="proj.png">
+              </div>
+              <div>
+                  <div>
+                    <!--insert placeholder image of bar graph-->
+                    <img class="round" src="roles.png">
+                  </div>
+                  <div>
+                    <!--insert placeholder image of bar graph-->
+                    <img class="round" src="forecast.png">
+                  </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="highcharts.js"></script>
+</body>
