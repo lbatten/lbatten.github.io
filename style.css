@@ -20,7 +20,24 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
   background-color: grey;
   color: #FFFFFF;
+}
+
+.header {
+  background-color: grey;
+  color: #FFFFFF;
+  height: 100px;
+}
+
+.portfolio {
+  background-color: grey;
+  color: teal;
+  height: 500px;
+}
+
+.footer {
+  background-color: grey;
+  color: purple;
+  height: 100px;
 }
